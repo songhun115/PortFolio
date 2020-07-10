@@ -12,6 +12,13 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/*버튼 노말라이즈*/
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
 /*Global Start*/
 :root {
   /* color */
@@ -99,10 +106,43 @@ p {
   margin: 4px;
   cursor: pointer;
   border-radius: var(--size-border-radius);
+  transition: background-color 0.3s;
 }
 .navber__menu__item.active {
   border: 1px solid var(--color-white);
 }
 .navber__menu__item:hover {
+  transition: background-color 0.3s;
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background: url("imgs/home.png") center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+.home_avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+.home__title,
+.home_description {
+  color: var(--color-white);
+}
+.home__contact:hover {
+  transition: background-color 0.3s;
+  background-color: var(--color-dark-pink);
+}
+.home__contact {
+  transition: background-color 0.3s;
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--font-regular);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
 }
