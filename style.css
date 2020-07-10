@@ -53,7 +53,7 @@ button {
   --size-border-radius: 4px;
 
   /* Annimation */
-  -o-animation-duration: 0.3s;
+  --animation-duration: 0.3s;
 }
 
 /*Section common*/
@@ -292,4 +292,96 @@ p {
 .tools__list > li,
 .etc__list > li {
   margin-bottom: 10px;
+}
+/* Work */
+.work_categories {
+  margin: 40px;
+}
+.category__btn {
+  border: 2px solid var(--color-dark-white);
+  border-radius: var(--size-border-radius);
+  font-size: var(--font-regular);
+  padding: 8px 48px;
+  transition: 0.3s;
+}
+.category__btn.active,
+.category__btn:hover {
+  transition: 0.3s;
+  background-color: var(--color-pink);
+  color: var(--color-white);
+}
+.category__btn.active .category__count,
+.category__btn:hover > .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.project {
+  height: 250px;
+  width: 280px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.project__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+  transform: translateY(10px);
+}
+.project__description:hover {
+  opacity: 0.7;
+  transform: translateY(0px);
+  transition: all var(--animation-duration) ease-in;
+}
+.project__description > h3,
+span {
+  color: var(--color-white);
+}
+.project__description > h3:after {
+  content: "";
+  width: 25px;
+  position: relative;
+  left: 50%;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+  display: block;
 }
