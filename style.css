@@ -53,7 +53,7 @@ button {
   --size-border-radius: 4px;
 
   /* Annimation */
-  --animation-duration: 0.3s;
+  --animation-duration: 300ms;
 }
 
 /*Section common*/
@@ -80,7 +80,7 @@ h1 {
   margin: 16px 0;
 }
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px;
@@ -101,12 +101,20 @@ p {
 
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-pink);
+  background-color: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+  background-color: var(--color-pink);
+  transition: all var(--animation-duration) ease-in-out;
+  padding: 8px;
 }
 .navbar__logo {
   font-size: medium;
@@ -137,6 +145,7 @@ p {
 #home {
   background: url("imgs/home.png") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
@@ -294,6 +303,11 @@ p {
   margin-bottom: 10px;
 }
 /* Work */
+#work {
+  margin: auto;
+  max-width: 1400px;
+  border: 1px solid red;
+}
 .work_categories {
   margin: 40px;
 }
@@ -403,6 +417,7 @@ span {
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  align-self: center;
 }
 
 .testimonial:nth-child(odd) > .testimonials__avatar {
@@ -426,7 +441,38 @@ span {
 .testimonials__speech-bubble > P {
   color: var(--color-dark-grey);
 }
+
 .testimonials__speech-bubble a {
   color: var(--color-pink);
+  margin: 0 5px;
   font-weight: var(--weight-bold);
+}
+
+/* Contact */
+
+#contact {
+  background-color: var(--color-pink);
+}
+.contact__title,
+.contact__emlil,
+.contact__rights,
+.contact__links {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 32px;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin: 24px 0;
+}
+.contact__links i {
+  transition: all var(--animation-duration) ease-in;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
+  transition: all var(--animation-duration) ease-in;
 }
