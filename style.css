@@ -1,18 +1,18 @@
-font-family: "Open Sans", sans-serif;
-
 body,
 ul,
 li {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
+  cursor: default;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-/*Global*/
+/*Global Start*/
 :root {
   /* color */
   --color-white: #ffffff;
@@ -28,6 +28,7 @@ a {
   --color-yellow: #fff7d1;
   --color-orange: #feb546;
   --color-black: #000000;
+  /*Global End*/
 
   /* font size */
   --font-large: 48px;
@@ -42,12 +43,14 @@ a {
   --weight-regular: 400;
 
   /* size */
+  --size-border-radius: 4px;
 }
-/* Universal tags*/
+/* Universal tags Start*/
 * {
   box-sizing: border-box;
 }
-/* Typography */
+/* Universal tags End*/
+/* Typography Start */
 h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
@@ -71,4 +74,35 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px;
+}
+/* Typography End */
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  color: var(--color-white);
+  padding: 16px;
+}
+.navbar__logo {
+  font-size: medium;
+  font-weight: var(--weight-semi-bold);
+}
+.navbar__menu {
+  display: flex;
+}
+
+.navber__menu__item {
+  padding: 8px 12px;
+  margin: 4px;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+.navber__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+.navber__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
