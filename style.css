@@ -51,6 +51,9 @@ button {
 
   /* size */
   --size-border-radius: 4px;
+
+  /* Annimation */
+  -o-animation-duration: 0.3s;
 }
 /* Universal tags Start*/
 * {
@@ -108,34 +111,40 @@ p {
   border-radius: var(--size-border-radius);
   transition: background-color 0.3s;
 }
+
 .navber__menu__item.active {
   border: 1px solid var(--color-white);
 }
+
 .navber__menu__item:hover {
   transition: background-color 0.3s;
   background-color: var(--color-dark-pink);
 }
 
-/* Home */
+/* Home Start */
 #home {
   background: url("imgs/home.png") center/cover no-repeat;
   padding: 40px;
   text-align: center;
 }
+
 .home_avatar {
   width: 250px;
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
 }
+
 .home__title,
 .home_description {
   color: var(--color-white);
 }
+
 .home__contact:hover {
   transition: background-color 0.3s;
   background-color: var(--color-dark-pink);
 }
+
 .home__contact {
   transition: background-color 0.3s;
   color: var(--color-white);
@@ -146,3 +155,73 @@ p {
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
 }
+
+/* Home End */
+
+/*Section common*/
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+/* About Start */
+.about__majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major__icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  margin: auto;
+  border: 1px solid blue;
+  color: var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major__icon i {
+  transition: all 0.3s ease;
+}
+.major__icon:hover i {
+  transition: all 0.3s ease;
+  color: var(--color-pink);
+  transform: rotate(-30deg) scale(1.1);
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-grey);
+}
+
+.major__description {
+  font-size: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+.job > .job__logo {
+  width: 100px;
+}
+.job__name,
+.job__period {
+  color: var(--color-light-grey);
+}
+
+.job__name {
+  font-size: var(--font-small);
+}
+.job__period {
+  font-size: var(--font-mrcro);
+}
+.job__description {
+  margin: 16px;
+  text-align: left;
+}
+/* About End */
