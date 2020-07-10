@@ -37,13 +37,38 @@ a {
   --font-mrcro: 14px;
 
   /* font weight*/
-  --font-bold: 700;
-  --font-semi-bold: 600;
-  --font-regular: 400;
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
 
   /* size */
 }
 /* Universal tags*/
 * {
   box-sizing: border-box;
+}
+/* Typography */
+h1 {
+  font-size: var(--font-large);
+  font-weight: var(--weight-bold);
+  color: var(--color-black);
+  margin: 16px 0;
+}
+h2 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px;
+}
+h3 {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 8px;
+}
+p {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  color: var(--color-black);
+  margin: 4px;
 }
