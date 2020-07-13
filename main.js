@@ -14,15 +14,20 @@ document.addEventListener("scroll", () => {
 //Click to move to the menu item position
 const navbarMenu = document.querySelector(".navbar__menu"); //<- 변수 선언 navbarMenu는 navbar__menu이다
 
-navbarMenu.addEventListener("click", () => {
+navbarMenu.addEventListener("click", (event) => {
   //<- 클릭시 이벤트 발생
   const target = event.target;
   const link = target.dataset.link;
   if (link == null) {
     return;
   }
-
+  navbarMenu.classList.remove("open");
   scrollIntoView(link); // <- 이 아래 함수를 불러다 아이디만 적어주면 그 아이디위치로 이동
+});
+
+const toggleBar = document.querySelector(".toggle__btn");
+toggleBar.addEventListener("click", () => {
+  navbarMenu.classList.toggle("open");
 });
 
 const homeContactBtn = document.querySelector(".home__contact"); // <- 변수 선언 homeContactBtn home__contact이다
