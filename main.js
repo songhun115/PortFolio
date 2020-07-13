@@ -59,7 +59,33 @@ document.addEventListener("scroll", () => {
 upButton.addEventListener("click", () => {
   scrollIntoView("#home");
 });
-/* 직접만든 JS코드 
+
+const workBtnContainer = document.querySelector(".work_categories");
+const categoryBtn = document.querySelector(".category__btn");
+const projectContainer = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+
+workBtnContainer.addEventListener("click", (e) => {
+  const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if (filter == null) {
+    return;
+  }
+
+  projectContainer.classList.add("anim-out");
+
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter === "*" || filter === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+    projectContainer.classList.remove("anim-out");
+  }, 350);
+});
+
+/* 직접만든  버튼 JS코드 
 const upButton = document.querySelector(".up__Button");
 document.addEventListener("scroll", () => {
   if (window.scrollY > navbarHeight) {
